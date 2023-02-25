@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .nav {
+        @apply w-[133px] h-[1010px] bg-[#6E00FF] flex flex-col items-center justify-between rounded-[25px];
+    }
+    .search {
+        @apply w-[537px] h-[79px] rounded-[25px];
+    }
+    .iconSearch {
+        @apply w-[43px] stroke-[#7C7C7C] fill-[#7C7C7C];
+    }
+    .icon {
+        @apply w-[58px] h-[58px] stroke-white mt-[60px];
+    }
+    .avatar {
+        @apply w-32 rounded-[4px] h-60 max-h-max;
+    }
+}
