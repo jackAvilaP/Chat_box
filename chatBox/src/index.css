@@ -3,19 +3,31 @@
 @tailwind utilities;
 
 @layer components {
-    .nav {
-        @apply w-[133px] h-[1010px] bg-[#6E00FF] flex flex-col items-center justify-between rounded-[25px];
-    }
-    .search {
-        @apply w-[537px] h-[79px] rounded-[25px];
-    }
-    .iconSearch {
-        @apply w-[43px] stroke-[#7C7C7C] fill-[#7C7C7C];
-    }
-    .icon {
-        @apply w-[58px] h-[58px] stroke-white mt-[60px];
-    }
-    .avatar {
-        @apply w-32 rounded-[4px] h-60 max-h-max;
-    }
+  .root {
+    @apply bg-[#EFF6FC] max-w-full p-4 mx-0 flex justify-between container;
+  }
+
+  .nav {
+    @apply w-[133px] h-full bg-[#6E00FF] flex flex-col items-center justify-between rounded-[25px];
+  }
+  .search {
+    @apply relative flex items-center drop-shadow;
+  }
+  .iconSearch {
+    @apply w-[43px] stroke-[#7C7C7C] fill-[#7C7C7C] absolute;
+  }
+  .icon {
+    @apply w-[58px] h-[58px] stroke-white mt-[60px];
+  }
+  .avatar {
+    @apply w-32 rounded-[4px] h-60 max-h-max;
+  }
+
+  .groups {
+    @apply bg-white border-[1px] mt-[34px] p-4 rounded-[25px] drop-shadow;
+  }
+
+  .chat{
+    @apply flex pb-2 justify-between items-center border-b-[1px] border-[#B4ABAB];
+  }
 }

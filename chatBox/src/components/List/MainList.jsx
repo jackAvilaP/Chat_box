@@ -1,12 +1,16 @@
-import React from 'react'
-import Search from './Search'
+import React from "react";
+import Groups from "./Groups";
+import People from "./People";
+import Search from "./Search";
 
 const MainList = () => {
-    return (
-        <div>
-            <Search />
-        </div>
-    )
-}
+  return (
+    <div>
+      <Search />
+      <Groups />
+      <People />
+    </div>
+  );
+};
 
-export default MainList
+export default MainList;
