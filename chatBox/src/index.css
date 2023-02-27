@@ -18,7 +18,7 @@
 
 @layer components {
   .root {
-    @apply max-w-full h-screen p-4 mx-0 flex justify-between container;
+    @apply max-w-full h-screen p-4 mx-0 bg-gray-100 flex justify-between container;
   }
 
   .nav {
@@ -38,14 +38,12 @@
     @apply w-full relative flex items-center drop-shadow;
   }
   .inputForm {
-    @apply text-xl w-full h-[50px] rounded-[25px] pr-3 pl-12 focus:outline-none focus:ring focus:ring-violet-300;
+    @apply text-xl w-full h-[50px] rounded-[25px] pr-3 pl-24 focus:outline-none focus:ring focus:ring-violet-300;
   }
   .iconSend {
-    @apply stroke-[#333333] w-6 h-6 absolute;
+    @apply stroke-[#6E00FF] w-6 h-6 absolute;
   }
-  .iconGroup {
-    @apply stroke-[#333333] w-6 h-6;
-  }
+
   .iconSearch {
     @apply w-8 stroke-[#7C7C7C] fill-[#7C7C7C] absolute;
   }
