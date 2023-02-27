@@ -8,7 +8,7 @@ const NavBar = () => {
         <div className='nav'>
 
             <div className='mt-[32px]'>
-                <img src={avatarImg} className='w-[78px] h-[78px] object-cover rounded-full' />
+                <img src={avatarImg} className='w-14 h-14 object-cover rounded-full' />
             </div>
 
             <div>

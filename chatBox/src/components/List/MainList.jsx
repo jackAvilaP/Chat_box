@@ -5,7 +5,7 @@ import Search from "./Search";
 
 const MainList = () => {
   return (
-    <div>
+    <div className="w-[35%] mx-2">
       <Search />
       <Groups />
       <People />

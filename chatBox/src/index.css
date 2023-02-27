@@ -2,32 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6e00ff; /* Color del scrollbar */
+  border-radius: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(139 92 246 / var(--tw-bg-opacity));
+}
+
 @layer components {
   .root {
-    @apply bg-[#EFF6FC] max-w-full p-4 mx-0 flex justify-between container;
+    @apply max-w-full h-screen p-4 mx-0 flex justify-between container;
   }
 
   .nav {
-    @apply w-[133px] h-full bg-[#6E00FF] flex flex-col items-center justify-between rounded-[25px];
+    @apply w-20 h-full bg-[#6E00FF] flex flex-col items-center justify-between rounded-[25px];
+  }
+  .navChat {
+    @apply flex w-full justify-between border-b-[1px] border-[#B4ABAB];
   }
   .search {
     @apply relative flex items-center drop-shadow;
   }
+
+  .inputSearch {
+    @apply pr-3 pl-20 w-full h-12 rounded-[12px] text-xl focus:outline-none focus:ring focus:ring-violet-300;
+  }
+  .sendInput {
+    @apply w-full relative flex items-center drop-shadow;
+  }
+  .inputForm {
+    @apply text-xl w-full h-[50px] rounded-[25px] pr-3 pl-12 focus:outline-none focus:ring focus:ring-violet-300;
+  }
+  .iconSend {
+    @apply stroke-[#333333] w-6 h-6 absolute;
+  }
+  .iconGroup {
+    @apply stroke-[#333333] w-6 h-6;
+  }
   .iconSearch {
-    @apply w-[43px] stroke-[#7C7C7C] fill-[#7C7C7C] absolute;
+    @apply w-8 stroke-[#7C7C7C] fill-[#7C7C7C] absolute;
   }
   .icon {
-    @apply w-[58px] h-[58px] stroke-white mt-[60px];
+    @apply w-8 h-8 stroke-white mt-5;
   }
   .avatar {
     @apply w-32 rounded-[4px] h-60 max-h-max;
   }
 
   .groups {
-    @apply bg-white border-[1px] mt-[34px] p-4 rounded-[25px] drop-shadow;
+    @apply bg-white border-[1px] mt-4 p-4 rounded-[12px] drop-shadow;
   }
 
-  .chat{
-    @apply flex pb-2 justify-between items-center border-b-[1px] border-[#B4ABAB];
+  .chat {
+    @apply w-[50%] flex p-4 flex-col  items-center;
+  }
+
+  .btn {
+    @apply w-9 h-9 stroke-[#ffffff];
+  }
+  .btn2 {
+    @apply flex justify-center items-center bg-[#6E00FF] object-cover rounded-full w-14 hover:bg-violet-500;
+  }
+
+  .messageChat {
+    @apply bg-red-200 h-2/4;
+  }
+
+  .form {
+    @apply w-full flex justify-between;
   }
 }

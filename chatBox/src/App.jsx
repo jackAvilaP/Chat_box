@@ -4,30 +4,17 @@ import MainList from "./components/List/MainList";
 import Chat from "./components/mainChat/Chat";
 import NavBar from "./components/Nav/NavBar";
 
-//import socket.io-client
-import io from 'socket.io-client';
-
-//object return socket
-const socket = io('http://localhost:4000')
-
-
 function App() {
   return (
     <div className="root">
       {/* NavBar left */}
-      <section>
-        <NavBar />
-      </section>
+      <NavBar />
 
       {/* Section list chats, search and people */}
-      <section className="ml-9">
-        <MainList />
-      </section>
+      <MainList />
 
       {/* chat personal */}
-      <section>
-        <Chat />
-      </section>
+      <Chat />
     </div>
   );
 }

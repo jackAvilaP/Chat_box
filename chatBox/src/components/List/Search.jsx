@@ -15,11 +15,7 @@ const Search = () => {
           clipRule="evenodd"
         />
       </svg>
-      <input
-        type="text"
-        placeholder="Search"
-        className="pr-3 pl-20 w-[537px] h-[79px] rounded-[25px] text-4xl focus:outline-none focus:ring focus:ring-violet-300 "
-      />
+      <input type="text" placeholder="Search" className="inputSearch" />
     </div>
   );
 };
