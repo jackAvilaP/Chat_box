@@ -3,7 +3,7 @@ import React from "react";
 const SendInput = () => {
   const [message, setMessage] = useState("");
 
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };

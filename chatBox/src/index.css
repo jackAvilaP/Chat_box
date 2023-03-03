@@ -66,7 +66,7 @@
     @apply w-9 h-9 stroke-[#ffffff];
   }
   .btn2 {
-    @apply flex justify-center items-center bg-[#6E00FF] object-cover rounded-full w-14 hover:bg-violet-500;
+    @apply flex justify-center items-center bg-[#6E00FF] object-cover rounded-full w-14 hover:bg-violet-500 transition;
   }
 
   .messageChat {

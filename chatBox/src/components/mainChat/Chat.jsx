@@ -13,15 +13,14 @@ import Mic from "./Mic";
 const socket = io("http://localhost:4000");
 
 const Chat = () => {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
 
-  //mic function
-
-
+  let date = new Date();
 
   useEffect(() => {
     const receiveMessage = (message) => {
+      console.log(message)
       setMessages([...messages, message]);
     };
 
@@ -34,13 +33,19 @@ const Chat = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    let hour = date.toLocaleTimeString('en-CO', { hour: '2-digit', minute: '2-digit' });
+
     if (message) {
       // emit(name, value) for send
-      socket.emit("message", message);
       const newMessage = {
         body: message,
+        hour,
         from: "Me",
       };
+      // socket.emit("message", message);
+      socket.emit("message", newMessage);
+
       setMessages([...messages, newMessage]);
       setMessage("");
     }
@@ -109,12 +114,30 @@ const Chat = () => {
         </div>
       </section>
 
-      <section className="h-full">
+      {/* Chat Conversation*/}
+      <section className="h-full w-full p-4 my-2 flex flex-col bg-[rgb(239,246,252)] rounded-[25px] overflow-y-auto hover:overflow-y-scroll">
         {messages.map((message, i) => (
           <div key={i}>
-            <p>
-              {message.from}: {message.body}{" "}
-            </p>
+            {
+              message.from == "Me" ? (
+                <div className="flex justify-end">
+                  <p className="bg-[#6E00FF] text-right text-white rounded-[15px] px-2 py-1 mb-2">
+                    {/* {message.from}: {message.body}{" "} */}
+                    {message.body}
+                    <p className="text-[10px] text-right ">{message.hour}</p>
+                  </p>
+                </div>
+              ) : (
+                <div className="flex justify-start">
+                  <p className="bg-[#E7E7E7] text-[#303030] rounded-[15px] px-2 py-1 mb-2 flex flex-col">
+                    {/* {message.from}: {message.body}{" "} */}
+                    {message.data.body}
+                    <p className="text-[10px]">{message.data.hour}</p>
+                  </p>
+                </div>
+              )
+            }
+
           </div>
         ))}
       </section>
