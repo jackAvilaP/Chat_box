@@ -54,6 +54,7 @@ const Chat = () => {
   return (
     <section className="chat">
       <section className="navChat">
+      
         <div className="flex items-center">
           <img
             src={user}
